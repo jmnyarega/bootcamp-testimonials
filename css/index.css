@@ -1,0 +1,120 @@
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+  --dark-blue-bg: hsla(240, 18%, 77%, 20%);
+}
+
+body {
+  max-width: 1400px;
+  width: 80%;
+  margin: 15% auto;
+  background-color: var(--dark-blue-bg);
+
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+ * Typography
+ */
+
+main {
+  color: var(--dark-blue);
+  position: relative;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.position {
+  opacity: 0.5;
+}
+
+main::after {
+  content: "";
+  width: 610px;
+  height: 154px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+
+  background: no-repeat url(../images/pattern-curve.svg);
+}
+
+/*
+ * components
+ */
+
+/*
+ * Slider
+ */
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+
+  width: 5rem;
+  background-color: white;
+  border-radius: 99rem;
+  padding: 1rem;
+
+  position: absolute;
+  bottom: calc(0% - 10px);
+  left: calc(50% - 20px);
+  transform: translateX(-50%);
+}
+
+/*
+ * Image Card
+ */
+
+.image-card {
+  position: relative;
+  object-fit: cover;
+}
+
+.pattern-curve {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  z-index: -1;
+}
+
+/*
+ * Description
+*/
+
+.description {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.description__text {
+  margin: 3rem 0;
+  line-height: 1.6;
+
+  position: relative;
+}
+
+.description__text::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+
+  background: no-repeat url(../images/pattern-quotes.svg);
+  width: 120px;
+  height: 100px;
+}
+
+.description__footer p {
+  margin: 0;
+}
+
