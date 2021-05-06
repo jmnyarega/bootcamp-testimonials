@@ -2,6 +2,7 @@
   --dark-blue: hsl(240, 38%, 20%);
   --grayish-blue: hsl(240, 18%, 77%);
   --dark-blue-bg: hsla(240, 18%, 77%, 20%);
+  --white-opacity: hsla(0 100% 100%, 0.5);
 }
 
 body {
@@ -43,31 +44,13 @@ main::after {
   bottom: 0;
   z-index: -1;
 
-  background: no-repeat url(../images/pattern-curve.svg);
+  /*background: no-repeat url(../images/pattern-curve.svg);*/
 }
 
 /*
  * components
  */
 
-/*
- * Slider
- */
-
-.slider {
-  display: flex;
-  justify-content: space-between;
-
-  width: 5rem;
-  background-color: white;
-  border-radius: 99rem;
-  padding: 1rem;
-
-  position: absolute;
-  bottom: calc(0% - 10px);
-  left: calc(50% - 20px);
-  transform: translateX(-50%);
-}
 
 /*
  * Image Card
@@ -78,11 +61,36 @@ main::after {
   object-fit: cover;
 }
 
-.pattern-curve {
+.image-card__pattern-curve {
   position: absolute;
-  top: -10%;
-  left: -10%;
+  bottom: -10%;
+  right: -2%;
   z-index: -1;
+}
+
+.image-card__person {
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 1px 1px var(--white-opacity);
+
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.image-card__slider {
+  display: flex;
+  justify-content: space-between;
+
+  width: 5rem;
+  background-color: white;
+  border-radius: 99rem;
+  padding: 1rem;
+
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
 }
 
 /*
@@ -118,3 +126,33 @@ main::after {
   margin: 0;
 }
 
+ @media (min-width: 400px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .top-section, .bottom-section {
+    width: 45%;
+  }
+
+  .image-card__person {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+  }
+
+  .image-card__pattern-curve {
+    position: absolute;
+    bottom: -36px;
+    right: -8px;
+  }
+
+  .image-card__slider {
+    position: absolute;
+    bottom: -7%;
+    left: 25%;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+}
