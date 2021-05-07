@@ -3,20 +3,26 @@
   --grayish-blue: hsl(240, 18%, 77%);
   --dark-blue-bg: hsla(240, 18%, 77%, 20%);
   --white-opacity: hsla(0 100% 100%, 0.5);
+  --shadow: 0 3px 24px -10px hsl(0deg 0% 0% / 50%);
 }
 
 body {
   max-width: 1400px;
   width: 80%;
   margin: 15% auto;
-  background-color: var(--dark-blue-bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-size: 2rem;
   font-family: "Inter", sans-serif;
-}
 
-img {
-  max-width: 100%;
+  max-height: 100vh;
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100%;
 }
 
 /*
@@ -36,46 +42,40 @@ main {
   opacity: 0.5;
 }
 
-main::after {
-  content: "";
-  width: 610px;
-  height: 154px;
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
+/*
+ * Layout
+ */
 
-  /*background: no-repeat url(../images/pattern-curve.svg);*/
+.bottom-section {
+  margin-top: 5rem;
 }
 
 /*
  * components
  */
 
-
 /*
  * Image Card
  */
-
 .image-card {
   position: relative;
-  object-fit: cover;
 }
 
 .image-card__pattern-curve {
   position: absolute;
-  bottom: -10%;
-  right: -2%;
+  bottom: -192px;
+  right: -195px;
+  transform: scale(0.5);
   z-index: -1;
 }
 
 .image-card__person {
   margin: 0 auto;
   display: block;
-  box-shadow: 0 0 1px 1px var(--white-opacity);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
 
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  height: 265px;
 }
 
 .image-card__slider {
@@ -85,37 +85,35 @@ main::after {
   width: 5rem;
   background-color: white;
   border-radius: 99rem;
-  padding: 1rem;
+  padding: 1.2rem;
 
   position: absolute;
-  bottom: -7%;
+  bottom: -1.6rem;
   left: 50%;
   transform: translateX(-50%) scale(0.8);
+  box-shadow: var(--shadow);
 }
 
 /*
  * Description
 */
-
 .description {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 300;
   text-align: center;
 }
 
 .description__text {
-  margin: 3rem 0;
   line-height: 1.6;
-
   position: relative;
 }
 
 .description__text::before {
   content: "";
-
   position: absolute;
   left: 50%;
-  bottom: 50%;
-  transform: translateX(-50%);
+  top: -50px;
+  transform: translateX(-50%) scale(0.5);
 
   background: no-repeat url(../images/pattern-quotes.svg);
   width: 120px;
@@ -126,33 +124,64 @@ main::after {
   margin: 0;
 }
 
- @media (min-width: 400px) {
+@media (min-width: 400px) {
+  body {
+    background-size: 50%;
+  }
+
   main {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
   }
-
-  .top-section, .bottom-section {
+  s .top-section,
+  .bottom-section {
     width: 45%;
+    margin: 0;
   }
 
   .image-card__person {
-    width: 330px;
-    height: 330px;
-    object-fit: cover;
+    width: 540px;
+    height: 540px;
+  }
+
+  .description {
+    margin-right: -8rem;
+    text-align: initial;
+  }
+
+  .description__text {
+    font-size: 2rem;
+  }
+
+  .description__text::before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: -50px;
+    transform: scale(1);
+
+    background: no-repeat url(../images/pattern-quotes.svg);
+    width: 120px;
+    height: 100px;
+  }
+
+  .description__footer {
+    display: flex;
+    column-gap: 1rem;
   }
 
   .image-card__pattern-curve {
     position: absolute;
-    bottom: -36px;
-    right: -8px;
+    bottom: -57px;
+    right: -73px;
+    transform: scale(1);
   }
 
   .image-card__slider {
     position: absolute;
-    bottom: -7%;
-    left: 25%;
-    transform: translateX(-50%) scale(0.8);
+    bottom: -1.7rem;
+    left: 7rem;
+    transform: scale(0.8);
   }
-
 }
