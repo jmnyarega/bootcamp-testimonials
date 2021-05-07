@@ -19,45 +19,94 @@
   </head>
   <body>
     <main>
-      <section class="top-section">
-        <div class="image-card">
-          <img
-            class="image-card__person"
-            src="./images/image-tanya.jpg"
-            alt="tanya"
-          />
-          <img
-            class="image-card__pattern-curve"
-            src="./images/pattern-bg.svg"
-            alt="pattern-curve"
-          />
-          <div class="image-card__slider">
+      <div class="slide slide-1">
+        <section class="top-section">
+          <div class="image-card">
             <img
-              class="image-slider-next"
-              src="./images/icon-prev.svg"
-              alt="slider-next"
+              class="image-card__person"
+              src="./images/image-tanya.jpg"
+              alt="tanya"
             />
             <img
-              class="image-slider-next"
-              src="./images/icon-next.svg"
-              alt="slider-next"
+              class="image-card__pattern-curve"
+              src="./images/pattern-bg.svg"
+              alt="pattern-curve"
             />
+            <div class="image-card__slider">
+              <img
+                class="image-slider-next"
+                src="./images/icon-prev.svg"
+                alt="slider-prev"
+                onclick="prev()"
+              />
+              <img
+                class="image-slider-next"
+                src="./images/icon-next.svg"
+                alt="slider-next"
+                onclick="next()"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="bottom-section">
-        <div class="description">
-          <p class="description__text">
-            "I’ve been interested in coding for a while but never taken the
-            jump, until now. I couldn’t recommend this course enough. I’m now in
-            the job of my dreams and so excited about the future."
-          </p>
-          <div class="description__footer">
-            <p class="name">Tanya Sinclair</p>
-            <p class="position">UX Engineer</p>
+        </section>
+        <section class="bottom-section">
+          <div class="description">
+            <p class="description__text">
+              "I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future."
+            </p>
+            <div class="description__footer">
+              <p class="name">Tanya Sinclair</p>
+              <p class="position">UX Engineer</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+      <div class="slide slide-2">
+        <section class="top-section">
+          <div class="image-card">
+            <img
+              class="image-card__person"
+              src="./images/image-john.jpg"
+              alt="tanya"
+            />
+            <img
+              class="image-card__pattern-curve"
+              src="./images/pattern-bg.svg"
+              alt="pattern-curve"
+            />
+            <div class="image-card__slider">
+              <img
+                class="image-slider-next"
+                src="./images/icon-prev.svg"
+                alt="slider-prev"
+                onclick="prev()"
+              />
+              <img
+                class="image-slider-next"
+                src="./images/icon-next.svg"
+                alt="slider-next"
+                onclick="next()"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="bottom-section">
+          <div class="description">
+            <p class="description__text">
+              "If you want to lay the best foundation possible I’d recommend
+              taking this course. The depth the instructors go into is
+              incredible. I now feel so confident about starting up as a
+              professional developer."
+            </p>
+            <div class="description__footer">
+              <p class="name">Tanya Sinclair</p>
+              <p class="position">UX Engineer</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>

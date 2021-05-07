@@ -24,11 +24,19 @@ body {
   background-position: bottom left;
 }
 
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
 /*
  * Typography
  */
 
-main {
+.slide {
   color: var(--dark-blue);
   position: relative;
 }
@@ -92,6 +100,7 @@ main {
   left: 50%;
   transform: translateX(-50%) scale(0.8);
   box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 /*
@@ -124,8 +133,12 @@ main {
   margin: 0;
 }
 
+main > div:first-child {
+  display: none;
+}
+
 @media (min-width: 400px) {
-  main {
+  .slide {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
