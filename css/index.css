@@ -24,6 +24,10 @@ body {
   background-position: bottom left;
 }
 
+#slide-1 {
+  display: none;
+}
+
 .display-block {
   display: block;
 }
@@ -133,17 +137,13 @@ body {
   margin: 0;
 }
 
-main > div:first-child {
-  display: none;
-}
-
 @media (min-width: 400px) {
   .slide {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
   }
-  s .top-section,
+  .top-section,
   .bottom-section {
     width: 45%;
     margin: 0;
@@ -155,7 +155,7 @@ main > div:first-child {
   }
 
   .description {
-    margin-right: -8rem;
+    margin-right: -6rem;
     text-align: initial;
   }
 
