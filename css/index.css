@@ -74,10 +74,10 @@ body {
   --grayish-blue: hsl(240, 18%, 77%);
   --dark-blue-bg: hsla(240, 18%, 77%, 20%);
   --white: hsl(0 100% 100%);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Inter", Serif;
-  max-width: 100em;
-  width: 90%;
+  max-width: 120em;
+  width: 80%;
   margin-top: 3rem;
   margin-inline: auto;
   background: no-repeat url(../assets/pattern-curve.svg);
@@ -165,12 +165,13 @@ body {
           bottom: 1.5rem; } }
       @media (min-width: 60em) {
         .testimonial__img .slider {
-          left: 30%; } }
+          left: 25%;
+          bottom: 2rem; } }
       @media (min-width: 75em) {
         .testimonial__img .slider {
           width: 6.6875rem;
           height: 3.375rem;
-          left: 20%; } }
+          left: 30%; } }
   .testimonial__text {
     margin-bottom: 1.5625rem;
     max-width: 28ch;
@@ -196,11 +197,13 @@ body {
     .testimonial__content {
       margin-right: -10rem;
       z-index: 2; } }
-  .testimonial__attribution .name {
-    font-weight: bold; }
-  .testimonial__attribution .position {
-    opacity: 0.5; }
-  @media (min-width: 50em) {
-    .testimonial__attribution {
-      display: flex;
-      column-gap: 0.75rem; } }
+  .testimonial__attribution {
+    font-size: 1.5rem; }
+    .testimonial__attribution .name {
+      font-weight: bold; }
+    .testimonial__attribution .position {
+      opacity: 0.5; }
+    @media (min-width: 50em) {
+      .testimonial__attribution {
+        display: flex;
+        column-gap: 0.75rem; } }
