@@ -74,9 +74,9 @@ body {
   --grayish-blue: hsl(240, 18%, 77%);
   --dark-blue-bg: hsla(240, 18%, 77%, 20%);
   --white: hsl(0 100% 100%);
-  font-size: 1.12rem;
+  font-size: 1.5rem;
   font-family: "Inter", Serif;
-  max-width: 90em;
+  max-width: 100em;
   width: 90%;
   margin-top: 3rem;
   margin-inline: auto;
@@ -122,8 +122,8 @@ body {
         min-height: 19.5rem; } }
     @media (min-width: 50em) {
       .testimonial__img {
-        background-size: 22.625rem auto;
-        min-height: 23.625rem;
+        background-size: 24.625rem auto;
+        min-height: 25.625rem;
         margin-bottom: 0; } }
     @media (min-width: 75em) {
       .testimonial__img {
@@ -138,7 +138,7 @@ body {
           height: 15.82rem; } }
       @media (min-width: 50em) {
         .testimonial__img .user {
-          height: 17.625rem; } }
+          height: 20.625rem; } }
       @media (min-width: 75em) {
         .testimonial__img .user {
           height: 31.625rem; } }
@@ -162,7 +162,7 @@ body {
         .testimonial__img .slider {
           transform: initial;
           left: 20%;
-          bottom: 2rem; } }
+          bottom: 1.5rem; } }
       @media (min-width: 60em) {
         .testimonial__img .slider {
           left: 30%; } }
@@ -172,7 +172,6 @@ body {
           height: 3.375rem;
           left: 20%; } }
   .testimonial__text {
-    font-size: 1.25rem;
     margin-bottom: 1.5625rem;
     max-width: 28ch;
     margin-inline: auto;
@@ -180,15 +179,19 @@ body {
     .testimonial__text img {
       position: absolute;
       left: 50%;
-      top: -1.5rem;
+      top: -2rem;
       transform: translateX(-50%);
-      width: 3.5rem; }
+      height: 4rem; }
       @media (min-width: 50em) {
         .testimonial__text img {
           left: 5rem; } }
     @media (min-width: 50em) {
       .testimonial__text {
         max-width: 60ch; } }
+  @media (min-width: 50em) {
+    .testimonial__content {
+      margin-right: 0;
+      z-index: 2; } }
   @media (min-width: 50em) {
     .testimonial__content {
       margin-right: -10rem;

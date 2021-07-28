@@ -6,9 +6,9 @@ body {
   --dark-blue-bg: hsla(240, 18%, 77%, 20%);
   --white: hsl(0 100% 100%);
 
-  font-size: 1.12rem;
+  font-size: 1.5rem;
   font-family: "Inter", Serif;
-  max-width: 90em;
+  max-width: 100em;
   width: 90%;
   margin-top: 3rem;
   margin-inline: auto;
@@ -63,8 +63,8 @@ body {
     }
 
     @media (min-width: 50em) {
-      background-size: 22.625rem auto;
-      min-height: 23.625rem;
+      background-size: 24.625rem auto;
+      min-height: 25.625rem;
       margin-bottom: 0;
     }
 
@@ -83,7 +83,7 @@ body {
       }
 
       @media (min-width: 50em) {
-        height: 17.625rem;
+        height: 20.625rem;
       }
 
       @media (min-width: 75em) {
@@ -115,7 +115,7 @@ body {
       @media (min-width: 50em) {
         transform: initial;
         left: 20%;
-        bottom: 2rem;
+        bottom: 1.5rem;
       }
 
       @media (min-width: 60em) {
@@ -131,7 +131,6 @@ body {
   }
 
   &__text {
-    font-size: 1.25rem;
     margin-bottom: 1.5625rem;
     max-width: 28ch;;
     margin-inline: auto;
@@ -140,9 +139,9 @@ body {
     img {
       position: absolute;
       left: 50%;
-      top: -1.5rem;
+      top: -2rem;
       transform: translateX(-50%);
-      width: 3.5rem;
+      height: 4rem;
 
       @media (min-width: 50em) {
         left: 5rem;
@@ -154,6 +153,10 @@ body {
   }
 
   &__content {
+    @media (min-width: 50em) {
+      margin-right: 0;
+      z-index: 2;
+    }
     @media (min-width: 50em) {
       margin-right: -10rem;
       z-index: 2;
