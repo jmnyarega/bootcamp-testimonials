@@ -136,13 +136,14 @@ body {
     max-width: 28ch;;
     margin-inline: auto;
     position: relative;
+    font-weight: 300;
 
     img {
       position: absolute;
       left: 50%;
       top: -2rem;
       transform: translateX(-50%);
-      height: 4rem;
+      height: 5rem;
 
       @media (min-width: 50em) {
         left: 5rem;

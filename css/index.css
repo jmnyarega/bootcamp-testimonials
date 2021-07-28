@@ -176,13 +176,14 @@ body {
     margin-bottom: 1.5625rem;
     max-width: 28ch;
     margin-inline: auto;
-    position: relative; }
+    position: relative;
+    font-weight: 300; }
     .testimonial__text img {
       position: absolute;
       left: 50%;
       top: -2rem;
       transform: translateX(-50%);
-      height: 4rem; }
+      height: 5rem; }
       @media (min-width: 50em) {
         .testimonial__text img {
           left: 5rem; } }
